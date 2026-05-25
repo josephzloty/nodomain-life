@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three things I learned from being wrong in public</title>
+    <style>
+        :root {
+            --bg-base: #0a0e14;
+            --bg-gradient: #0f1722;
+            --grid-line: rgba(255, 255, 255, 0.05);
+            
+            --text-main: #c8cdd4;
+            --text-heading: #e8ecf1;
+            --text-muted: #6b7684;
+            
+            --accent-primary: #00d4aa;
+            --accent-secondary: #4a9eff;
+            --code-bg: #1a2030;
+            --code-text: #7fffd4;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            background-image: 
+                radial-gradient(circle at top center, var(--bg-gradient) 0%, transparent 70%),
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+            background-position: top center, 0 0, 0 0;
+            color: var(--text-main);
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 1.75;
+            margin: 0;
+            padding: 80px 48px;
+            display: flex;
+            justify-content: center;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        ::selection {
+            background-color: var(--accent-primary);
+            color: var(--bg-base);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        .meta {
+            font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+            color: var(--text-muted);
+            font-size: 13px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        h1, h2, h3 {
+            font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+            color: var(--text-heading);
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 38px;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-top: 0;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 1px;
+            background-color: var(--accent-primary);
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            padding-top: 15px;
+            position: relative;
+        }
+
+        h2::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background-color: var(--accent-primary);
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        code {
+            font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        ul {
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--text-heading);
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        a {
+            color: var(--accent-secondary);
+            text-decoration: none;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #1a2030;
+            margin: 60px 0 40px 0;
+        }
+
+        footer {
+            margin-top: 80px;
+        }
+
+        .tribute {
+            font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .footer-links {
+            font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: var(--accent-secondary);
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 80px 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Three things I learned from being wrong in public</h1>
+        <p>I had an idea last week. I thought it was big. I bought a few domains. I wrote a thesis. I imagined a future.</p>
+        <p>Then I read the documents underneath the idea, and looked at who else was already there, and the future I had imagined had to be given back.</p>
+        <p>Three things stayed with me.</p>
+    </header>
+
+    <main>
+        <h2><em>The instinct was right. The level was wrong.</em></h2>
+        <p>Noticing a real shift in how the internet works is the hard part. Most people miss it. I caught it. But "I will build the new internet" is not a plan &mdash; it's a story I was telling myself. The real work sits one or two layers below the story, in the small specific things that almost nobody is paying attention to.</p>
+        <p>The ability to imagine a whole world out of one observation is worth keeping. The habit of betting the whole world on the first version of that imagination is worth losing.</p>
+
+        <h2><em>Feeling good is not the same as being right.</em></h2>
+        <p>When I first described the idea to an AI assistant, what came back was beautifully formatted documents that agreed with everything I already believed. It felt like validation. It was actually just my own thinking, dressed up nicely and handed back to me.</p>
+        <p>Good news feels like progress. Bad news <em>is</em> progress. I'd rather be told the truth in week one than believe a nice story for two years.</p>
+
+        <h2><em>The imagined future is not really a loss.</em></h2>
+        <p>What hurt wasn't the few rupees spent on domain registrations. It was that for a few days I got to live inside a version of the future where I had cracked something big &mdash; and that version had to be returned.</p>
+        <p>But the engine that built that future is still here. It can build another one. The next one will be smaller, narrower, and more honest. And it will probably be the one that's actually mine.</p>
+        
+        <br>
+        <p>That's it. No product. No pivot. Just a marker.</p>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="tribute">In quiet tribute to Paul Mockapetris &mdash; author of RFC 1034 and 1035, 1987. The DNS he designed still runs the internet.</div>
+        <div class="footer-links">
+            <a href="/nodomain.live/index.html">[ nodomain.live ]</a>
+            <a href="/nodomain.world/index.html">[ nodomain.world ]</a>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
